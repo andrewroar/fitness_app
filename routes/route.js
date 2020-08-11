@@ -76,4 +76,29 @@ router.post("/api/workouts/", ({ body }, res) => {
     });
 });
 
+//////////////script///////////////
+router.get("/index.js", (req, res) => {
+  const filepath = path.join(__dirname, "../public/index.js");
+  console.log(filepath);
+  res.sendFile(filepath);
+});
+
+router.get("/index.css", (req, res) => {
+  const filepath = path.join(__dirname, "../public/index.css");
+  console.log(filepath);
+  res.sendFile(filepath);
+});
+
+router.get("/workout.js", (req, res) => {
+  const filepath = path.join(__dirname, "../public/workout.js");
+  console.log(filepath);
+  res.sendFile(filepath);
+});
+
+router.get("/stats.js", (req, res) => {
+  const filepath = path.join(__dirname, "../public/stats.js");
+  console.log(filepath);
+  res.sendFile(filepath);
+});
+
 module.exports = router;
