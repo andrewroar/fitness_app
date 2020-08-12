@@ -1,51 +1,25 @@
-# Unit 17 Nosql Homework: Workout Tracker
+# Unit 17 Nosql Homework: Workout Tracker Homework
 
-For this assignment, you'll create a workout tracker. You have already been provided with the front end code in the `Develop` folder. This assignment will require you to create Mongo database with a Mongoose schema and handle routes with Express.
+I have been given the seed and the frontend of the Track app and was required to complete the back end of the app.
 
 ## User Story
 
-* As a user, I want to be able to view create and track daily workouts. I want to be able to log multiple exercises in a workout on a given day. I should also be able to track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, I should be able to track my distance traveled.
+As the frontend is a bit confusing, it took me a while to fully understand the app. I deployed mongoDB as the database for the app and completed the route to handle to get and put request of the frontend. While the app is currently functional there are some problem I need to work with the frontend to improve the app.
+
+First, the public file need to be organised
+
+Second, the date in the seed are generated as a number which is something I struggle to reproduce. I also do not understand the decision behind this and will need more information to work on that
 
 ## Business Context
 
 A consumer will reach their fitness goals quicker when they track their workout progress.
 
-## Acceptance Criteria
+## Breakdown
 
-When the user loads the page, they should be given the option to create a new workout, or continue with their last workout.
+Models: It contains the schema for the app. The main thing to beware in here is that in the exercises of the schema, I did not put any requirement or limitation in it as there are two set of different datas generated from the frontend and I fear that any requirement might confuse the database. I will try to put some requirements in the future in a way it would not break the app.
 
-The user should be able to:
+Public: This file needed to be organised in the future
 
-  * Add exercises to a previous workout plan.
+Routes: Contains all the route for the front end. I did not put a route for /api/workouts/range as I believe it serves no purpose.
 
-  * Add new exercises to a new workout plan.
-
-  * View multiple the combined weight of multiple exercises on the `stats` page.
-
-## Commit Early and Often
-
-One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for two reasons:
-
-1. Your commit history is a signal to employers that you are actively working on projects and learning new skills
-
-2. Your commit history allows you to revert your code base in the event that you need to return to a previous state
-
-Follow these guidelines for committing:
-
-* Make single purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits
-
-* Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history
-
-* Don't commit half done work, for the sake of your collaborators (and your future self!)
-
-* Test your application before you commit to ensure functionality at every step in the development process
-
-We would like you to have well over 200 commits by graduation, so commit early and often!
-
-## Submission on BCS
-
-You are required to submit the following:
-
-* The URL to the deployed application
-
-* The URL to the Github repository
+Seeders: contain the seed of the app and was given by the front end. It did not work in Heroku by default so I added {useUnifiedTopology: true} to the connection
