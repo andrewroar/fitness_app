@@ -20,6 +20,6 @@ Models: It contains the schema for the app. The main thing to beware in here is 
 
 Public: This file needed to be organised in the future
 
-Routes: Contains all the route for the front end. I did not put a route for /api/workouts/range as I believe it serves no purpose.
+Routes: Contains all the route for the front end.
 
 Seeders: contain the seed of the app and was given by the front end. It did not work in Heroku by default so I added {useUnifiedTopology: true} to the connection
